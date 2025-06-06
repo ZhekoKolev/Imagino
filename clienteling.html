@@ -279,7 +279,7 @@ return;
 }
 try {
 const proxyUrl = 'https://zhekokolev.github.io/Imagino/proxy-server.js'; // Ex : https://monproxy.exemple.com/api/getContact/
-const response = await fetch(`${proxyUrl}${id}`, {
+const response = await fetch(`${proxyUrl}?userId=${encodeURIComponent(id)}`, {
 headers: {
 'accept': '*/*',
 'X-API-KEY': '28f7fe4-664c-4b00-b2c8-53316d48bc72'
