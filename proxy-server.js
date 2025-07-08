@@ -9,7 +9,7 @@ app.use(cors());  // Autorise toutes origines
 
 app.get('/api/getContact/:userId', async (req, res) => {
   const userId = req.params.userId;
-  const apiUrl = `https://zheko-sandbox.saas.imagino.com/ucdapi/get_Contact/1/Single_Customer_View/${userId}`;
+  const apiUrl = `https://zheko-sandbox.saas.imagino.com/ucdapi/get_MasterContact/2/Single_Customer_View/${userId}`;
 
   try {
     const response = await fetch(apiUrl);
