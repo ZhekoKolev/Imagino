@@ -292,7 +292,7 @@ try {
     
 //const response = await fetch(`https://zheko-sandbox.saas.imagino.com/ucdapi/get_MasterContact/2/Single_Customer_View/${id}`, { 
 const proxyUrl = '/proxy-server.js'; // Ex : https://monproxy.exemple.com/api/getContact/
-const response = await fetch(`${proxyUrl}?userId=${encodeURIComponent(id)}`, {
+const response = await fetch(`${proxyUrl}?userId=${id}`, {
 headers: {
 'accept': '*/*',
 'X-API-KEY': '358503ff-c3cb-43eb-81bf-6a3620f66a73'
