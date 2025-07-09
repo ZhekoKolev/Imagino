@@ -12,7 +12,7 @@ exports.handler = async (event) => {
     };
   }
   
-  const apiKey = "358503ff-c3cb-43eb-81bf-6a3620f66a73"; // Keep this secret here
+  const apiKey = "xxxxxxx"; // Keep this secret here
   const options = {
     hostname: 'zheko-sandbox.saas.imagino.com',
     path: `/ucdapi/get_MasterContact/2/Single_Customer_View/${userId}`,
