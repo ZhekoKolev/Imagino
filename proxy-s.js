@@ -12,7 +12,7 @@ exports.handler = async (event) => {
     };
   }
   
-  const apiKey = "xxxxxxx"; // Keep this secret here
+  const apiKey = "358503ff-c3cb-43eb-81bf-6a3620f66a73"; // Keep this secret here
   const options = {
     hostname: 'zheko-sandbox.saas.imagino.com',
     path: `/ucdapi/get_MasterContact/2/Single_Customer_View/${userId}`,
@@ -21,6 +21,17 @@ exports.handler = async (event) => {
       'X-API-KEY': apiKey,
     },
   };
+if (response.ok) {
+  const data = await response.json();
+  if (data && data.User_ID_string) {
+    console.log("email =");
+    console.log(data.Email);
+    document.getElementById('email').value = data.Email || '';
+    document.getElementById('firstName').value = data.First_Name || '';
+    document.getElementById('lastName').value = data.Last_Name || '';
+    document.getElementById('phone').value = data.Phone || '';
+    document.getElementById('address').value = data.Address || '';
+  }}
 
   console.log("Making request to:", options.hostname + options.path);
 
