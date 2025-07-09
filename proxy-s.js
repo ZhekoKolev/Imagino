@@ -1,4 +1,4 @@
-const https = require('https');
+const http = require('http');
 
 exports.handler = async (event) => {
   console.log("Lambda triggered with event:", JSON.stringify(event));
