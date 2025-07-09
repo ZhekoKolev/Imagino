@@ -21,17 +21,6 @@ exports.handler = async (event) => {
       'X-API-KEY': apiKey,
     },
   };
-if (response.ok) {
-  const data = await response.json();
-  if (data && data.User_ID_string) {
-    console.log("email =");
-    console.log(data.Email);
-    document.getElementById('email').value = data.Email || '';
-    document.getElementById('firstName').value = data.First_Name || '';
-    document.getElementById('lastName').value = data.Last_Name || '';
-    document.getElementById('phone').value = data.Phone || '';
-    document.getElementById('address').value = data.Address || '';
-  }}
 
   console.log("Making request to:", options.hostname + options.path);
 
